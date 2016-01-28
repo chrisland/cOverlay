@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html  style="width:100%;height:100%">
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+
+
+  <!-- include source files here... -->
+  <script src="../src/cOverlay.js"></script>
+  
+	
+
+</head>
+
+<body style="width:100%;height:100%">
+	
+
+	
+  <button onClick="showOverlay2();">show</button>
+  <button onClick="removeOverlay2();">hide</button>
+	
+	<script>
+		
+		var myOverlay = new cOverlay({'root': '../img'});
+		
+    myOverlay.show(3000, function (that) {
+      that.destroy();
+    })
+    
+		
+		
+    // ---------------------------------------
+    
+    var myOverlay2 = new cOverlay({
+      size: '20',
+      root: '../img',
+      file: 'spinner_gears.svg'
+    });
+		
+    function showOverlay2() {
+      myOverlay2.show();
+    }
+    
+    function removeOverlay2() {
+      myOverlay2.hide();
+    }
+    
+    console.log(myOverlay2);
+			  
+	</script>
+	
+	
+</body>
+</html>
